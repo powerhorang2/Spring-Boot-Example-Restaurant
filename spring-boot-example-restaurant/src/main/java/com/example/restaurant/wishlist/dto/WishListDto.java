@@ -7,11 +7,11 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 public class WishListDto extends MemoryDbEntity {
-
+    private Integer index;
     private String title;                   // 음식명, 장소명
     private String category;                // 카테고리
     private String address;                 // 주소
