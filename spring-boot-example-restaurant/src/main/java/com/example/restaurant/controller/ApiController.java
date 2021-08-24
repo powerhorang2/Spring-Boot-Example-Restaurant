@@ -6,6 +6,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Slf4j
 @RestController
 @RequestMapping("/api/restaurant")
@@ -24,5 +26,10 @@ public class ApiController {
       log.info("{}", wishListDto);
 
       return wishListService.add(wishListDto);
+    }
+
+    @GetMapping("/all")
+    public List<WishListDto> findAll() {
+        return wishListService.findAll();
     }
 }
