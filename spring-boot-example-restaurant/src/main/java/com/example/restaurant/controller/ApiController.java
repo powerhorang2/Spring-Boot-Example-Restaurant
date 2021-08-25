@@ -27,7 +27,7 @@ public class ApiController {
       return wishListService.add(wishListDto);
     }
 
-    @GetMapping("/all")
+    @GetMapping("/wish-list")
     public List<WishListDto> findAll() {
         return wishListService.findAll();
     }
